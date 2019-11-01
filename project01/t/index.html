@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>t</title>
+</head>
+<body>
+    <button type="button" class="btn btn-default" id="start">Start</button>
+    <button type="button" class="btn btn-default" id="stop">Stop</button>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+    <script>
+        //Настройка холсат
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+
+		//Получаем ширину и высоту элемента canvas
+		var width = canvas.width;
+		var height = canvas.height;
+
+		//Устанавливаем счет 0
+		var score = 0;
+
+        //массив цветов
+        var colorsForSquarey = ['Black', 'Green', 'Blue', 'Yellow', 'Green', 'Red', 'Lime', 'Aqua', 'Purple', 'Orange'];
+
+		//Рисуем рамку
+		var drawBorder = function () {
+			ctx.fillStyle = "Gray";
+			ctx.fillRect(0, 50, width, 3);
+			ctx.fillRect(0, height - 3, width, 3);
+			ctx.fillRect(0, 50, 3, height);
+			ctx.fillRect(width - 3, 50, 3, height);
+            
+		};
+
+		//Выводим счет игры в левом верхнем углу
+		var drawScore = function(){
+			ctx.font = "20px Courier";
+			ctx.fillStyle = "Black";
+			ctx.textAlign = "left";
+			ctx.textBaseline = "top";
+			ctx.fillText("Счет: " + score, 10, 10);
+		};
+
+        //СОздание квадрата
+        var squares = [];
+        var createSquares = function(){
+            
+            var rand = colorsForSquarey[Math.floor(Math.random()*colorsForSquarey.length)]
+            if (squares.length < 100){
+                squares.push({
+                    x: Math.random()*width-10,
+                    y: 55,
+                    speed: 2+Math.random()*3,
+                    color: rand,
+                });
+            }
+        }
+
+        //Увеличение счетчика при нажатии
+        
+        
+        //Обновление квадрата
+        var updateSquares = function(){
+            for (var i in squares){
+                var part = squares[i];
+                part.y += part.speed;
+            }
+        }
+
+        //Удаление квадрата при достижении нижней границы
+        var killSquares = function(){
+            for (var i in squares){
+                var part = squares[i];
+                if (part.y > height){
+                    part.y = 55;
+                }
+            }
+        }
+
+        //Рисуем квадрат 
+        var drawSquares = function(){
+            for (var i in squares){
+                var part = squares[i];
+                ctx.beginPath();
+                ctx.fillRect(part.x,part.y, 20, 20);
+                ctx.closePath();
+                ctx.fillStyle = part.color;
+                ctx.fill();
+            }
+        }
+
+        var start = document.getElementById('start');
+        start.onclick = function(){
+            //Запускаем функцию анимации через setInterval
+            var intervalId = setInterval(function(){
+                ctx.clearRect(0, 0, width, height);
+                drawScore();
+                drawBorder();
+                createSquares();
+                updateSquares();
+                killSquares();
+                drawSquares();
+            }, 30);
+        }
+
+        
+    </script>
+</body>
+</html>
