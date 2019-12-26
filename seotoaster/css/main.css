@@ -1,0 +1,241 @@
+body {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+body header {
+  background: url(../img/header_bg.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 1080px;
+  width: 100%;
+  max-width: 1920px;
+}
+body header nav {
+  display: flex;
+  width: 80%;
+  margin-top: 40px;
+  margin-left: 200px;
+  justify-content: center;
+  align-items: center;
+}
+body header nav menu {
+  list-style: none;
+  text-transform: uppercase;
+  display: flex;
+  margin-left: 430px;
+}
+body header nav menu p {
+  color: #fefefe;
+  font-family: Roboto, sans-serif;
+  font-size: 20pt;
+  text-decoration: none;
+  display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+body header nav menu li a {
+  color: #fefefe;
+  font-family: Roboto, sans-serif;
+  font-size: 20pt;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+}
+body header nav menu li a:hover {
+  color: #6556df;
+}
+body .about_us {
+  background: url(../img/aboutus_bg.png) no-repeat;
+  max-width: 1920px;
+  min-height: 690px;
+  padding-top: 70px;
+}
+body .about_us .about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  margin-left: 227px;
+  margin-right: 100px;
+}
+body .about_us .about .box_1 {
+  padding-right: 75px;
+  margin: 0;
+  padding-top: 100px;
+  width: 386px;
+  height: 386px;
+}
+body .about_us .about .box_2 {
+  padding: 0;
+  margin: 0;
+}
+body .about_us .about .box_2 h2 {
+  color: #000;
+  font-size: 46pt;
+  text-transform: uppercase;
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+}
+body .about_us .about .box_2 p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #999;
+  font-weight: bold;
+  font-family: Raleway, sans-serif;
+  font-size: 14pt;
+  line-height: 17pt;
+}
+body .about_us .about .box_2 p span {
+  color: #000;
+  font-family: Raleway, sans-serif;
+  font-size: 18pt;
+}
+body .about_us .about .box_2 p .about-us-content-img {
+  float: right;
+  min-width: 23%;
+  min-height: 23%;
+  margin-top: 140px;
+  margin-right: 45px;
+}
+body .about_us .about .box_2 ul {
+  list-style: url(../img/dote.png);
+  margin-left: 10px;
+}
+body .about_us .about .box_2 li {
+  color: #6c6c6c;
+  font-family: Roboto, sans-serif;
+  font-size: 14pt;
+  margin-top: 13px;
+}
+body .who_uses {
+  display: flex;
+  background: url(../img/toaster_bg.png) no-repeat;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 690px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+body .who_uses h3 {
+  color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 18pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+body .who_uses .us_box_1 {
+  line-height: 1.2;
+  margin-right: 140px;
+  margin-left: 20px;
+}
+body .who_uses .us_box_1 .wda {
+  margin-bottom: 70px;
+}
+body .who_uses .us_box_1 .wd {
+  margin-top: 100px;
+}
+body .who_uses .us_box_1 .icon_1-3 {
+  float: left;
+  margin-right: 5px;
+}
+body .who_uses .us_box_1 p {
+  color: #7d7d7d;
+  font-family: Roboto, sans-serif;
+  font-size: 14pt;
+  margin-left: 55px;
+}
+body .who_uses .us_box_3 {
+  line-height: 1.2;
+  margin-left: 130px;
+}
+body .who_uses .us_box_3 .mso {
+  margin-bottom: 60px;
+}
+body .who_uses .us_box_3 .wo {
+  margin-top: 110px;
+}
+body .who_uses .us_box_3 h3 {
+  text-align: right;
+}
+body .who_uses .us_box_3 .icon_2-4 {
+  float: right;
+  margin-left: 5px;
+}
+body .who_uses .us_box_3 p {
+  color: #7d7d7d;
+  font-family: Roboto, sans-serif;
+  font-size: 14pt;
+  text-align: right;
+  margin-right: 55px;
+}
+body .contact_us {
+  display: flex;
+  background: url(../img/contactus_bg.png) no-repeat;
+  width: 100%;
+  max-width: 1920px;
+  min-height: 690px;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+body .contact_us .contact label {
+  color: #6c6c6c;
+  font-family: Roboto, sans-serif;
+  font-size: 18pt;
+}
+body .contact_us .contact input {
+  display: block;
+  background-color: #f8f8f8;
+  color: #dbdbdb;
+  border: #e7e7e7 solid 2px;
+  font-family: Roboto, sans-serif;
+  font-size: 18pt;
+  font-style: italic;
+}
+body .contact_us h2 {
+  color: #000;
+  font-weight: bold;
+  font-family: Roboto, sans-serif;
+  font-size: 46pt;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 75px;
+}
+body .contact_us #details {
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 40px;
+  font-family: Roboto, sans-serif;
+  font-size: 14.2pt;
+  color: #6c6c6c;
+}
+body .contact_us #name {
+  height: 50px;
+  width: 430px;
+  margin-bottom: 20px;
+}
+body .contact_us #mail {
+  height: 50px;
+  width: 430px;
+  margin-bottom: 20px;
+}
+body .contact_us #message {
+  height: 120px;
+  width: 430px;
+}
+body .contact_us #btn {
+  color: white;
+  font-family: Roboto, sans-serif;
+  font-size: 20.4pt;
+  background: url(../img/button.png);
+  height: 50px;
+  border: none;
+  width: 180px;
+  margin-left: 125px;
+  margin-top: 30px;
+}

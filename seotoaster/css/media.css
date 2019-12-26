@@ -1,0 +1,52 @@
+@media screen and (max-width: 1590px){
+    header{
+        width: 75%;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    menu{
+        margin-top: 500px;
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width: 1366px){
+    .logo{
+        display: flex;
+        width: 30%;
+        margin-left: 50px;
+    }
+    menu{
+        width: 100%;
+        padding-right: 200px;
+    }
+    .toaster_img{
+        width: 120px;
+        height: 100px;
+    }
+}
+
+
+@media screen and (max-width: 1050px){
+    .logo{
+        display: flex;
+        width: 30%;
+        margin-right: 100px;
+    }
+    menu{
+        width: 100%;
+        padding-right: 500px;
+    }
+    .toaster_img{
+        width: 80px;
+        height: 80px;
+    }
+    .about_us{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
